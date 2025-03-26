@@ -1,0 +1,12 @@
+.vertical {
+    writing-mode: tb-rl;
+    white-space: nowrap;
+    display: block;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    color: gray;
+    margin-top: 20px;
+}
