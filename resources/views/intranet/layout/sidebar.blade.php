@@ -7,7 +7,7 @@
     <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition" style="background-color: rgba(39, 39, 39, 0.8)">
         <div class="user-panel d-flex">
             <div class="image">
-                <img src="{{asset('imagenes/SISTEMA/usuario-inicial.jpg')}}" class="img-circle elevation-2" alt="User Image">
+                <img src="{{asset('imagenes/sistema/usuario-inicial.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <h5 class="text-white text-small" style="font-size: 0.85em;">Cesar Maya</h5>

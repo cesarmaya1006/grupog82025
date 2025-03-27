@@ -43,6 +43,11 @@ class TablaRoles extends Seeder
         Permission::create(['name' => 'finca.update'])->syncRoles([$rol1,$rol2]);
         Permission::create(['name' => 'finca.destroy'])->syncRoles([$rol1,$rol2]);
         Permission::create(['name' => 'finca.activar'])->syncRoles([$rol1,$rol2]);
+        // ===================================================================================
+        Permission::create(['name' => 'accesoSistema'])->syncRoles([$rol1,$rol2]);
+        Permission::create(['name' => 'subirArchivo'])->syncRoles([$rol1,$rol2]);
+        Permission::create(['name' => 'descargarArchivo'])->syncRoles([$rol3,$rol2]);
+
 
     }
 }

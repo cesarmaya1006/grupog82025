@@ -106,7 +106,7 @@ class User extends Authenticatable
     }
     //==========================================================================================
     public function setAcceso(){
-        if ($this->hasPermissionTo('3')) {
+        if ($this->hasPermissionTo('Usuario')) {
             Acceso::create([
                 'usuario_id' => $this->id,
                 'fecha' => date("Y-m-d"),

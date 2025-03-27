@@ -21,6 +21,9 @@
         </div>
     </div>
     <hr>
+    @can('accesoSistema')
+
+
     <div class="row">
         <div class="col-12"><h4>Accesos al sistema</h4></div>
         <div class="col-12 table-responsive">
@@ -47,11 +50,13 @@
         </div>
     </div>
     <hr>
+    @endcan-
     <div class="row">
         <div class="col-12">
             <h4>Archivo de Proveedores</h4>
         </div>
         <br><br>
+        @can('subirArchivo')
         <div class="col-12 col-md-6" style="background-color: rgba(202, 202, 202, 0.5)">
             <div class="row p-4">
                 <div class="col-12"><h6><strong>Cargar Archivo</strong></h6></div>
@@ -78,10 +83,14 @@
                 </form>
             </div>
         </div>
+        @endcan
+
         <div class="col-12 col-md-6" style="background-color: rgb(255, 243, 220)">
             <div class="row p-4">
                 <div class="col-12"><h6><strong>Descargar Archivo de Proveedores</strong></h6></div>
-                <div class="col-12"></div>
+                <div class="col-12">
+                    <a href="{{asset('imagenes/sistema/logos/archivo_proveedores.xlsx')}}" target="_blank" rel="noopener noreferrer"><img src="{{asset('imagenes/sistema/excel.png')}}" class="img-fluid" alt="..."></a>
+                </div>
             </div>
         </div>
     </div>
