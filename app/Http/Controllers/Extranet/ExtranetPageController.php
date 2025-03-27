@@ -15,7 +15,7 @@ class ExtranetPageController extends Controller
     public function index()
     {
         $slider = Slider::OrderBy('id')->get();
-        $fincas = Finca::OrderBy('id')->get();
+        $fincas = Finca::where('estado',1)->OrderBy('id')->get();
         return view('extranet.index.index', compact('slider', 'fincas'));
     }
 
