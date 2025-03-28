@@ -1,11 +1,11 @@
 function activarFincas(url,id){
     const data_url = url;
     var data = {
-        _token: $('input[name=_token]').val()
+        _method: 'put',_token: $('input[name=_token]').val()
     };
     $.ajax({
         url: data_url,
-        type: "PUT",
+        type: "POST",
         data: data,
         success: function (respuesta) {
             console.log(respuesta);
