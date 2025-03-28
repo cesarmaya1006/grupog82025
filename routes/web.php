@@ -3,6 +3,7 @@
 use App\Http\Controllers\Config\FincaController;
 use App\Http\Controllers\Config\MenuController;
 use App\Http\Controllers\Config\MenuRolController;
+use App\Http\Controllers\Config\ParametroController;
 use App\Http\Controllers\Config\RolController;
 use App\Http\Controllers\Config\UsuarioController;
 use App\Http\Controllers\Extranet\ExtranetPageController;
@@ -74,6 +75,16 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
             Route::put('actualizar/{id}', 'update')->name('finca.update');
             Route::delete('eliminar/{id}', 'destroy')->name('finca.destroy');
             Route::put('activar/{id}', 'activar')->name('finca.activar');
+            // *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--*
+        });
+        // ----------------------------------------------------------------------------------------
+        // Ruta Administrador del Sistema Usuarios
+        Route::controller(ParametroController::class)->prefix('parametros')->group(function () {
+            Route::get('', 'index')->name('parametro.index');
+            Route::put('update_logo', 'update_logo')->name('update_logo.update');
+            Route::put('update_historia', 'update_historia')->name('update_historia.update');
+            Route::post('slider', 'slider')->name('slider.update');
+            Route::delete('slider_destroy/{id}', 'slider_destroy')->name('slider_destroy.destroy');
             // *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--* *--*
         });
         // ----------------------------------------------------------------------------------------
