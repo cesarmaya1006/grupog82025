@@ -103,6 +103,10 @@ class User extends Authenticatable
             'roles' => $roles,
             //'cant_notificaciones' => Notificacion::where('usuario_id',$this->id)->count(),
         ]);
+        if ($roles[0]['id'] == 3) {
+            Acceso::create(['usuario_id' => session('id_usuario'), 'fecha' => date('Y-m-d'),'hora' => date('H:i:s'),]);
+        }
+
     }
     //==========================================================================================
     public function setAcceso(){

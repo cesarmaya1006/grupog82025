@@ -13,7 +13,10 @@ class IntranetPageController extends Controller
      */
     public function dashboard()
     {
+
+
         $accesos = Acceso::get();
+
         return view('intranet.dashboard.index',compact('accesos'));
     }
 

@@ -20,7 +20,7 @@ class ExtranetPageController extends Controller
     }
 
     public function nuestrasfincas() {
-        $fincas = Finca::OrderBy('id')->get();
+        $fincas = Finca::where('estado',1)->OrderBy('id')->get();
         return view('extranet.nuestras.nuestras',compact('fincas'));
     }
     public function login_extranet() {

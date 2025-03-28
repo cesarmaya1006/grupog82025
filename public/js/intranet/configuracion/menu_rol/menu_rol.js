@@ -13,8 +13,9 @@ $('.menu_rol').on('change', function() {
 });
 
 function ajaxRequest(url, data) {
+    const data_url = $('#rutaMenuRol').attr('data_url');
     $.ajax({
-        url: url,
+        url: data_url,
         type: 'POST',
         data: data,
         success: function(respuesta) {
