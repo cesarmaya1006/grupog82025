@@ -50,7 +50,7 @@
         </div>
     </div>
     <hr>
-    @endcan-
+    @endcan
     <div class="row">
         <div class="col-12">
             <h4>Archivo de Proveedores</h4>

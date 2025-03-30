@@ -144,7 +144,7 @@ class UsuarioController extends Controller
                 unlink($ruta.$parametro->url);
             }
 
-            $archivo->move($ruta, 'archivo_proveedores.xlsx');
+            $archivo->move($ruta, 'archivo_proveedores.xlsm');
             $usuarios = User::where('id','>', 3);
             foreach ($usuarios as $usuario) {
                 # code...
@@ -154,7 +154,7 @@ class UsuarioController extends Controller
 
             $cambios['fecha'] = date('Y-m-d');
             $cambios['hora'] = date('H:i:s');
-            $cambios['url'] = 'archivo_proveedores.xlsx';
+            $cambios['url'] = 'archivo_proveedores.xlsm';
             $cambios['cambios'] = $request['cambios'];
             $parametro->update($cambios);
 
