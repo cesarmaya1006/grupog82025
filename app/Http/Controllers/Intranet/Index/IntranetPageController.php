@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Empresa\Acceso;
 use Illuminate\Http\Request;
 
+use App\Mail\ArchivoProveedores;
+use App\Models\Config\Parametro;
+use Illuminate\Support\Facades\Mail;
+
 class IntranetPageController extends Controller
 {
     /**
@@ -13,9 +17,15 @@ class IntranetPageController extends Controller
      */
     public function dashboard()
     {
-
-
         $accesos = Acceso::get();
+        $parametro_ = Parametro::findOrFail(1);
+        $parametro = $parametro_->url;
+
+
+        $cambioArchivo ='Cambios de prueba';
+        Mail::to('cesarmaya1006@gmail.com')->send(new ArchivoProveedores($cambioArchivo,$parametro));
+
+
 
         return view('intranet.dashboard.index',compact('accesos'));
     }

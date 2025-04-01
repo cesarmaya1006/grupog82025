@@ -10,7 +10,7 @@
                 <img src="{{asset('imagenes/sistema/usuario-inicial.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <h5 class="text-white text-small" style="font-size: 0.85em;">Cesar Maya</h5>
+                <h5 class="text-white text-small" style="font-size: 0.85em;">{{session('nombres_completos')}}</h5>
                 @if (session('rol_principal_id') < 4)
                     <h6 class="text-white" style="font-size: 0.85em;">{{session('rol_principal')}}</h6>
                 @endif

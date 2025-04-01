@@ -20,6 +20,8 @@
         "mailersend/laravel-driver": "^2.8",
         "nyholm/psr7": "^1.8",
         "railsware/mailtrap-php": "^2.1",
+        "resend/resend-laravel": "^0.17.0",
+        "resend/resend-php": "^0.16.0",
         "spatie/laravel-permission": "^6.16",
         "symfony/http-client": "^7.2"
     },

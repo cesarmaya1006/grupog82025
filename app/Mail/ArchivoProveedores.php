@@ -18,9 +18,13 @@ class ArchivoProveedores extends Mailable
      * Create a new message instance.
      */
     public $cambioArchivo;
-    public function __construct($cambioArchivo)
+    public $parametro;
+
+    public function __construct($cambioArchivo,$parametro)
     {
         $this->cambioArchivo = $cambioArchivo;
+        $this->parametro = $parametro;
+
     }
 
     /**
@@ -29,7 +33,7 @@ class ArchivoProveedores extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('aniarrazola@hotmail.com', 'Ana María Arrázola'),
+            //from: new Address('aniarrazola@hotmail.com', 'Ana María Arrázola'),
             subject: 'Archivo Proveedores',
         );
     }
@@ -42,7 +46,8 @@ class ArchivoProveedores extends Mailable
         return new Content(
             view: 'intranet.config.email.proveedores',
             with: [
-                'cambioArchivo' => $this->cambioArchivo
+                'cambioArchivo' => $this->cambioArchivo,
+                'parametro' => $this->parametro
             ],
         );
 

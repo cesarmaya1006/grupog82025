@@ -118,6 +118,6 @@ return [
     */
 
     //'from' => ['address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),'name' => env('MAIL_FROM_NAME', 'Example'),],
-    'from' => ['address' => 'aniarrazola@hotmail.com', 'name' => 'Ana María Arrázola'],
+    //'from' => ['address' => 'aniarrazola@hotmail.com', 'name' => 'Ana María Arrázola'],
 
 ];

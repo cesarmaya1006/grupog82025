@@ -15,7 +15,7 @@
         <div class="col-12">
             <p>El día de hoy hice cambios en el archivo de la página web en los siguientes proveedores:</p>
             <p>Cambios: {{$cambioArchivo}}</p>
-            <p><a href="{{asset('imagenes/sistema/logos/archivo_proveedores.xlsx')}}" target="_blank" rel="noopener noreferrer">Descargue el archivo</a></p>
+            <p><a href="{{asset('imagenes/sistema/logos/' . $parametro)}}" target="_blank" rel="noopener noreferrer">Descargue el archivo</a></p>
             <p>Saludos</p>
             <p>Ana María Arrázola</p>
             <p>Directora Grupo G8</p>
